@@ -23,8 +23,8 @@ public class SynchReadItemExample {
     JOpc jopc = new JOpc("localhost", "Matrikon.OPC.Simulation", "JOPC1");
 
     OpcItem item1 = new OpcItem("Random.Int4", true, "");
-    OpcItem item2 = new OpcItem("Random.ArrayOfReal8", true, "");
-    OpcItem item3 = new OpcItem("Random.ArrayOfString", true, "");
+    OpcItem item2 = new OpcItem("Random.Real4", true, "");
+    OpcItem item3 = new OpcItem("Random.Real8", true, "");
     
     //OpcItem item1 = new OpcItem("Random.Real8", true, "");
     //OpcItem item1 = new OpcItem("Random.String", true, "");
@@ -46,7 +46,8 @@ public class SynchReadItemExample {
     
     try {
       jopc.registerGroups();
-      System.out.println("OPCGroup are registered...");
+      System.out.println("OPCGroup are registered...");     
+      
     }
     catch (UnableAddGroupException e2) {
       e2.printStackTrace();
@@ -55,7 +56,6 @@ public class SynchReadItemExample {
       e2.printStackTrace();
     }
     
-       
     
 //    synchronized(test) {
 //      test.wait(50);
@@ -72,17 +72,18 @@ public class SynchReadItemExample {
       try {
     	 // GregorianCalendar c = GregorianCalendar.init;
     	  
-        OpcItem responseItem = jopc.synchReadItem(group, item1);
+        OpcItem responseItem = jopc.synchReadItemAndStore(group, item1, "c://temp//opc_log1.txt");
         System.out.println(responseItem);
         System.out.println(Variant.getVariantName(responseItem.getDataType()) + ": " + responseItem.getValue());
         
-        responseItem = jopc.synchReadItem(group, item2);
+        responseItem = jopc.synchReadItemAndStore(group, item2, "c://temp//opc_log2.txt");
         System.out.println(responseItem);
         System.out.println(Variant.getVariantName(responseItem.getDataType()) + ": " + responseItem.getValue());
         
-        responseItem = jopc.synchReadItem(group, item3);
+        responseItem = jopc.synchReadItemAndStore(group, item3, "c://temp//opc_log3.txt");
         System.out.println(responseItem);
         System.out.println(Variant.getVariantName(responseItem.getDataType()) + ": " + responseItem.getValue());
+        
         Variant varout = responseItem.getValue();
         if ((varout.getVariantType() & Variant.VT_ARRAY) == Variant.VT_ARRAY) {
         	VariantList varlist = varout.getArray();  
@@ -100,6 +101,8 @@ public class SynchReadItemExample {
         e.printStackTrace();
       }
     //}    
+      
+      
       
     JOpc.coUninitialize();
   }

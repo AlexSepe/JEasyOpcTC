@@ -733,6 +733,34 @@ begin
   end;
 end;
 
+
+//------------------------------------------------------------------------------
+function Java_javafish_clients_opc_JOpc_synchReadItemAndStoreNative(PEnv: PJNIEnv;
+  Obj: JObject; group : JObject; item : JObject; fn: JString) : JObject; stdcall;
+var
+    JVM : TJNIEnv;
+    fnS: String;
+begin
+  JVM := TJNIEnv.Create(PEnv);
+  try
+    fnS:= JVM.JStringToString(fn);
+  finally
+    JVM.Free();
+  end;
+
+  try
+    Result := TOPC(aopc[GetInt(ID, PEnv, Obj)]).synchReadItemAndStore(PEnv, group, item, fnS);
+  except
+    on E:ComponentNotFoundException do
+      throwException(PEnv, SComponentNotFoundException, UTF8String(E.Message));
+    on E:SynchReadException do
+      throwException(PEnv, SSynchReadException, UTF8String(E.Message));
+    on E:VariantInternalException do
+      throwException(PEnv, SVariantInternalException, UTF8String(E.Message));
+  end;
+end;
+
+
 (*******************************************************************************
   Make these routines available to Java.
 *******************************************************************************)
@@ -768,6 +796,8 @@ exports
   Java_javafish_clients_opc_JOpc_getDownloadGroupNative,
   Java_javafish_clients_opc_JOpc_setGroupUpdateTimeNative,
   Java_javafish_clients_opc_JOpc_setGroupActivityNative,
-  Java_javafish_clients_opc_JOpc_setItemActivityNative;
+  Java_javafish_clients_opc_JOpc_setItemActivityNative,
+
+  Java_javafish_clients_opc_JOpc_synchReadItemAndStoreNative;
 begin
 end.

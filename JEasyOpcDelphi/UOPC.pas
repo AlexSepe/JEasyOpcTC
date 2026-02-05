@@ -66,6 +66,7 @@ type
     //************************************************
     // read item (Synch), throws ComponentNotFoundException, SynchReadException
     function synchReadItem(PEnv: PJNIEnv; group: JObject; item: JObject) : JObject;
+    function synchReadItemAndStore(PEnv: PJNIEnv; group: JObject; item: JObject; fn: String) : JObject;
     // write item (Synch)
     procedure synchWriteItem(PEnv: PJNIEnv; group: JObject; item: JObject);
     // read group (Synch), throws ComponentNotFoundException, SynchReadException
@@ -86,6 +87,9 @@ type
   end;
 
 implementation
+
+uses
+  Variants;
 
 { TOPC }
 
@@ -393,6 +397,38 @@ begin
   foo.Free;
 end;
 
+procedure storeGroupAndItemToFile(item : TOPCItem; value: Variant; fn: string);
+var foo : TStringList;
+    i,j   : integer;
+    valueStr: String;
+begin
+  foo := TStringList.Create;
+
+  try
+    valueStr:= value;
+  except
+  on e: Exception do
+    valueStr:= 'Erro: ' + e.Message
+  end;
+
+
+  if item <> nil
+  then
+  begin
+        foo.Add('GROUP.Item: ' + item.getItemName);
+        foo.Add('GROUP.Item clientHandle: ' + IntToStr(item.getClientHandle));
+        foo.Add('GROUP.Item accessPath: ' + item.getAccessPath);
+        foo.Add('GROUP.Item itemValue: ' + valueStr);
+        foo.Add('GROUP.Item active: ' + BoolToStr(item.isActive, true));
+        foo.Add('GROUP.Item dataType: ' + IntToStr(item.getDataType));
+        //foo.Add('GROUP.Item quality: ' + BoolToStr(item.getItemQuality, true));
+  end
+  else foo.Add('ITEMS: empty group');
+  // store to file
+  foo.SaveToFile(fn);
+  foo.Free;
+end;
+
 //------------------------------------------------------------------------------
 
 function TOPC.synchReadItem(PEnv: PJNIEnv; group, item: JObject): JObject;
@@ -414,6 +450,35 @@ begin
     itemNative.setItemQuality(quality);
     itm := itemNative.clone(PEnv, item);
     itemNative.commit(PEnv, itm);
+    Result := itm;
+  end
+  else raise SynchReadException.create(SynchReadExceptionText);
+end;
+
+function TOPC.synchReadItemAndStore(PEnv: PJNIEnv; group, item: JObject; fn: String): JObject;
+var
+  groupNative : TOPCGroup;
+  itemNative  : TOPCItem;
+  value       : Variant;
+  quality     : word;
+  itm         : JObject;
+begin
+  groupNative := getGroupByJavaCode(PEnv, group);
+  itemNative  := groupNative.getItemByJavaCode(PEnv, item);
+  HR := ReadOPCGroupItemValue(groupNative.GroupIf, itemNative.ItemHandle, value, quality);
+
+  if Succeeded(HR)
+  then begin
+    itemNative.setTimeStamp(Now); // set actual timeStamp (System time)
+    itemNative.setItemValue(value);
+    itemNative.setItemQuality(quality);
+
+    Writeln('reading e writing: ' + itemNative.getItemName);
+    storeGroupAndItemToFile(itemNative, value, fn);
+
+    itm := itemNative.clone(PEnv, item);
+    itemNative.commit(PEnv, itm);
+
     Result := itm;
   end
   else raise SynchReadException.create(SynchReadExceptionText);

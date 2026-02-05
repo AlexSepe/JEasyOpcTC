@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCItem.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCExceptions.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UReportEasyOPCQueue.pas=F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\Unit2.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCQueue.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UStatusMessage.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UEasyOPCQueue.pas=F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UOPCQueue.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCSynch.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOpc\lib\Delphi\UVariant.pas=K:\work\workspace\workspace-gk\JEasyOpc\lib\Delphi\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UReport.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UCustomOPC.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOpc\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOpc\lib\Delphi\UVariant.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCThread.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCGroup.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCSynch.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPC.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UReportEasyOPCQueue.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCThread.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCThread.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCGroup.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UReport.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCAsynch.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\Unit2.pas=F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UReportEasyOPCQueue.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCQueue.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UStatusMessage.pas=</Transaction>
     <Transaction>1899/12/30 00:00:00.000.dfm,C:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\Unit1.dfm=</Transaction>
     <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPC.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPC.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCSynch.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser2.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.pas,C:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\Unit1.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser2.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\MyDelphiExample4\Delphi\JUtils.pas=F:\Java\MyJava\MyDelphiExample4\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCAsynch.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UCustomOPC.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCBrowser.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCQueue.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UReport.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UReport.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UOPCQueue.pas=F:\Java\MyJava\JEasyOPC\ThreadTemp\Delphi\UEasyOPCQueue.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCItem.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCQueue.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCSynch.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,F:\Java\MyJava\MyDelphiExample4\Delphi\Unit1.pas=F:\Java\MyJava\MyDelphiExample4\Delphi\JUtils.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UEasyOPCThread.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.pas,K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\Unit1.pas=K:\work\workspace\workspace-gk\JEasyOPC\lib\Delphi\UOPCExceptions.pas</Transaction>
   </Transactions>
 </BorlandProject>
